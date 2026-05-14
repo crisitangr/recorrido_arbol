@@ -29,15 +29,20 @@ public class NodoArbol<T> {
         this.hijo = hijo;
     }
     
-    public void setHijo(int pos, T dato) {
+    public void setHijo(int pos, T dato){ 
+        NodoArbol[] nuevoHijo = new NodoArbol[pos + 1]; 
         
+        nuevoHijo[pos] = new NodoArbol(dato, null);
+        
+        this.hijo = nuevoHijo; 
     }
 
     public void preOrden() {
-        System.out.print(this.dato);
+        System.out.print(this.dato+ ", ");
         if (hijo == null) return;
-        for (NodoArbol n : hijo) {
-            System.out.print(", ");
+         for (NodoArbol n : hijo) {
+             if (n != null)
+           
             n.preOrden();
         }
     }
