@@ -16,5 +16,8 @@ public class RecorridoArbol {
         tree.getHijo()[0].setHijo(0, 50);
         tree.getHijo()[1].setHijo(1, 40);
         tree.preOrden();
+        
+        System.out.println("\nInOrden:");
+        tree.inOrden();
     }
 }    

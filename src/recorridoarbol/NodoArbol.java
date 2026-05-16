@@ -46,4 +46,14 @@ public class NodoArbol<T> {
             n.preOrden();
         }
     }
+    public void inOrden() {
+        if (hijo != null && hijo.length > 0 && hijo[0] != null){
+            hijo[0].inOrden();
+        }
+        System.out.print(this.dato + ", ");
+        
+        if (hijo!= null && hijo.length > 1 && hijo[1] != null){
+            hijo[1].inOrden();
+        }
+    }
 }
