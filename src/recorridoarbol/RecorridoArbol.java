@@ -19,5 +19,8 @@ public class RecorridoArbol {
         
         System.out.println("\nInOrden:");
         tree.inOrden();
+        
+        System.out.println("\nPostOrden:");
+        tree.postOrden();
     }
 }    
